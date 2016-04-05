@@ -1,0 +1,200 @@
+{
+  "extends" : "thirdParty.api",
+  "abstract" : false,
+  "root" : "https://myapp.appspot.com/_ah/api",
+  "name" : "pointendpoint",
+  "version" : "v1",
+  "defaultVersion" : false,
+  "discovery" : [ "PUBLIC" ],
+  "adapter" : {
+    "bns" : "https://myapp.appspot.com/_ah/spi",
+    "deadline" : 65.0,
+    "type" : "lily"
+  },
+  "auth" : {
+    "allowCookieAuth" : false
+  },
+  "frontendLimits" : {
+    "unregisteredUserQps" : -1,
+    "unregisteredQps" : -1,
+    "unregisteredDaily" : -1,
+    "rules" : [ ]
+  },
+  "cacheControl" : {
+    "type" : "no-cache",
+    "maxAge" : 0
+  },
+  "ownerDomain" : "looter.com",
+  "ownerName" : "looter.com",
+  "packagePath" : "entities",
+  "methods" : {
+    "pointendpoint.getPoint" : {
+      "path" : "point/{id}",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.looter.endpoints.PointEndpoint.getPoint",
+      "request" : {
+        "parameters" : {
+          "id" : {
+            "type" : "int64",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "pointendpoint.removePoint" : {
+      "path" : "point/{id}",
+      "httpMethod" : "DELETE",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.looter.endpoints.PointEndpoint.removePoint",
+      "request" : {
+        "parameters" : {
+          "id" : {
+            "type" : "int64",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "empty"
+      }
+    },
+    "pointendpoint.listPoint" : {
+      "path" : "point",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.looter.endpoints.PointEndpoint.listPoint",
+      "request" : {
+        "parameters" : {
+          "cursor" : {
+            "type" : "string",
+            "required" : false
+          },
+          "limit" : {
+            "type" : "int32",
+            "required" : false
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "pointendpoint.updatePoint" : {
+      "path" : "point",
+      "httpMethod" : "PUT",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.looter.endpoints.PointEndpoint.updatePoint",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "pointendpoint.insertPoint" : {
+      "path" : "point",
+      "httpMethod" : "POST",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.looter.endpoints.PointEndpoint.insertPoint",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    }
+  },
+  "descriptor" : {
+    "schemas" : {
+      "Point" : {
+        "id" : "Point",
+        "type" : "object",
+        "properties" : {
+          "id" : {
+            "type" : "string",
+            "format" : "int64"
+          },
+          "eventId" : {
+            "type" : "string",
+            "format" : "int64"
+          },
+          "x" : {
+            "type" : "number"
+          },
+          "y" : {
+            "type" : "number"
+          }
+        }
+      },
+      "CollectionResponse_Point" : {
+        "id" : "CollectionResponse_Point",
+        "type" : "object",
+        "properties" : {
+          "items" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "Point"
+            }
+          },
+          "nextPageToken" : {
+            "type" : "string"
+          }
+        }
+      }
+    },
+    "methods" : {
+      "com.looter.endpoints.PointEndpoint.getPoint" : {
+        "response" : {
+          "$ref" : "Point"
+        }
+      },
+      "com.looter.endpoints.PointEndpoint.removePoint" : {
+      },
+      "com.looter.endpoints.PointEndpoint.listPoint" : {
+        "response" : {
+          "$ref" : "CollectionResponse_Point"
+        }
+      },
+      "com.looter.endpoints.PointEndpoint.updatePoint" : {
+        "request" : {
+          "$ref" : "Point"
+        },
+        "response" : {
+          "$ref" : "Point"
+        }
+      },
+      "com.looter.endpoints.PointEndpoint.insertPoint" : {
+        "request" : {
+          "$ref" : "Point"
+        },
+        "response" : {
+          "$ref" : "Point"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,201 @@
+{
+  "extends" : "thirdParty.api",
+  "abstract" : false,
+  "root" : "https://myapp.appspot.com/_ah/api",
+  "name" : "invitationendpoint",
+  "version" : "v1",
+  "defaultVersion" : false,
+  "discovery" : [ "PUBLIC" ],
+  "adapter" : {
+    "bns" : "https://myapp.appspot.com/_ah/spi",
+    "deadline" : 65.0,
+    "type" : "lily"
+  },
+  "auth" : {
+    "allowCookieAuth" : false
+  },
+  "frontendLimits" : {
+    "unregisteredUserQps" : -1,
+    "unregisteredQps" : -1,
+    "unregisteredDaily" : -1,
+    "rules" : [ ]
+  },
+  "cacheControl" : {
+    "type" : "no-cache",
+    "maxAge" : 0
+  },
+  "ownerDomain" : "looter.com",
+  "ownerName" : "looter.com",
+  "packagePath" : "entities",
+  "methods" : {
+    "invitationendpoint.insertInvitation" : {
+      "path" : "invitation",
+      "httpMethod" : "POST",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.looter.endpoints.InvitationEndpoint.insertInvitation",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "invitationendpoint.updateInvitation" : {
+      "path" : "invitation",
+      "httpMethod" : "PUT",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.looter.endpoints.InvitationEndpoint.updateInvitation",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "invitationendpoint.listInvitation" : {
+      "path" : "invitation",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.looter.endpoints.InvitationEndpoint.listInvitation",
+      "request" : {
+        "parameters" : {
+          "cursor" : {
+            "type" : "string",
+            "required" : false
+          },
+          "limit" : {
+            "type" : "int32",
+            "required" : false
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "invitationendpoint.removeInvitation" : {
+      "path" : "invitation/{id}",
+      "httpMethod" : "DELETE",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.looter.endpoints.InvitationEndpoint.removeInvitation",
+      "request" : {
+        "parameters" : {
+          "id" : {
+            "type" : "int64",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "empty"
+      }
+    },
+    "invitationendpoint.getInvitation" : {
+      "path" : "invitation/{id}",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.looter.endpoints.InvitationEndpoint.getInvitation",
+      "request" : {
+        "parameters" : {
+          "id" : {
+            "type" : "int64",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    }
+  },
+  "descriptor" : {
+    "schemas" : {
+      "Invitation" : {
+        "id" : "Invitation",
+        "type" : "object",
+        "properties" : {
+          "inviteeId" : {
+            "type" : "string",
+            "format" : "int64"
+          },
+          "eventId" : {
+            "type" : "string",
+            "format" : "int64"
+          },
+          "sendTime" : {
+            "type" : "string",
+            "format" : "int64"
+          },
+          "status" : {
+            "type" : "integer"
+          }
+        }
+      },
+      "CollectionResponse_Invitation" : {
+        "id" : "CollectionResponse_Invitation",
+        "type" : "object",
+        "properties" : {
+          "items" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "Invitation"
+            }
+          },
+          "nextPageToken" : {
+            "type" : "string"
+          }
+        }
+      }
+    },
+    "methods" : {
+      "com.looter.endpoints.InvitationEndpoint.insertInvitation" : {
+        "request" : {
+          "$ref" : "Invitation"
+        },
+        "response" : {
+          "$ref" : "Invitation"
+        }
+      },
+      "com.looter.endpoints.InvitationEndpoint.updateInvitation" : {
+        "request" : {
+          "$ref" : "Invitation"
+        },
+        "response" : {
+          "$ref" : "Invitation"
+        }
+      },
+      "com.looter.endpoints.InvitationEndpoint.listInvitation" : {
+        "response" : {
+          "$ref" : "CollectionResponse_Invitation"
+        }
+      },
+      "com.looter.endpoints.InvitationEndpoint.removeInvitation" : {
+      },
+      "com.looter.endpoints.InvitationEndpoint.getInvitation" : {
+        "response" : {
+          "$ref" : "Invitation"
+        }
+      }
+    }
+  }
+}
