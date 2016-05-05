@@ -1,5 +1,6 @@
 package pl.looter.appengine.domain;
 
+import com.googlecode.objectify.Key;
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
 import com.googlecode.objectify.annotation.Index;
@@ -28,6 +29,10 @@ public class User {
     private int level;
 
     private long xp;
+
+    public User() {
+
+    }
 
     public User(String registrationId) {
         this(null, registrationId);

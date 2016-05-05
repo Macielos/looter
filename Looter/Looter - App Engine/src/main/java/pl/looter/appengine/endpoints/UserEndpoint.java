@@ -69,6 +69,17 @@ public class UserEndpoint {
         return user;
     }
 
+    @ApiMethod(
+            name = "login",
+            path = "login/{name}",
+            httpMethod = ApiMethod.HttpMethod.GET)
+    public User login(@Named("name") String name) throws NotFoundException {
+        logger.info("Login User: " + name);
+        //TODO logging
+        List<User> users = ofy().load().type(User.class).filter("name", name).list();
+        return users == null || users.isEmpty() ? null : users.get(0);
+    }
+
     /**
      * Inserts a new {@code User}.
      */

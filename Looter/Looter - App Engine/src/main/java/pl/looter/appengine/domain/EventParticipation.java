@@ -1,26 +1,68 @@
 package pl.looter.appengine.domain;
 
-import java.io.Serializable;
+import com.googlecode.objectify.Ref;
+import com.googlecode.objectify.annotation.Entity;
+import com.googlecode.objectify.annotation.Id;
+
+import java.util.Date;
 
 import lombok.Data;
 
-/**
- * Created by Arjan on 21.04.2016.
- */
+@Entity
 @Data
-public class EventParticipation implements Serializable {
+public class EventParticipation {
 
-    private Long userId;
+	public enum Status {REQUESTED, INVITED, REJECTED, ACCEPTED};
 
-    private int score;
+	@Id
+	Long id;
 
-    public EventParticipation(Long userId) {
-        this.userId = userId;
-        this.score = 0;
-    }
+	private Ref<User> participant;
 
-    public void addScore(int score) {
-        this.score += score;
-    }
+	private Ref<User> master;
 
+	private Ref<Event> event;
+
+	private Date sendTime;
+	
+	private Status status;
+
+	private int score;
+
+	public EventParticipation() {
+
+	}
+
+	public EventParticipation(User participant, User master, Event event) {
+		this.participant = Ref.create(participant);
+		this.master = Ref.create(master);
+		this.event = Ref.create(event);
+		this.sendTime = new Date();
+		this.status = Status.INVITED;
+		this.score = 0;
+	}
+
+	public User getParticipant() {
+		return participant.get();
+	}
+
+	public void setParticipant(User participant) {
+		this.participant = Ref.create(participant);
+	}
+
+	public User getMaster() {
+		return master.get();
+	}
+
+	public void setMaster(User master) {
+		this.master = Ref.create(master);
+	}
+
+	public Event getEvent() {
+		return event.get();
+	}
+
+	public void setEvent(Event event) {
+		this.event = Ref.create(event);
+	}
 }

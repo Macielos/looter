@@ -4,6 +4,9 @@ import com.googlecode.objectify.Objectify;
 import com.googlecode.objectify.ObjectifyFactory;
 import com.googlecode.objectify.ObjectifyService;
 
+import pl.looter.appengine.domain.Event;
+import pl.looter.appengine.domain.EventParticipation;
+import pl.looter.appengine.domain.Point;
 import pl.looter.appengine.domain.User;
 
 /**
@@ -13,8 +16,12 @@ import pl.looter.appengine.domain.User;
  */
 public class OfyService {
 
-    static {
+    public static void init() {
+        ObjectifyService.begin();
         ObjectifyService.register(User.class);
+        ObjectifyService.register(Event.class);
+        ObjectifyService.register(Point.class);
+        ObjectifyService.register(EventParticipation.class);
     }
 
     public static Objectify ofy() {

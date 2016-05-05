@@ -1,4 +1,47 @@
 <resources>
-    <string name="app_name">Looter</string>
-    <string name="title_activity_map">Map</string>
+	<!-- GENERAL -->
+	<string name="app_name">Looter</string>
+	<string name="empty"> </string>
+	<string name="back">Back</string>
+
+	<!-- FUCK-UPS -->
+	<string name="internal_error">Internal error occurred. Try again later</string>
+	<string name="connection_error">Cannot reach server. Check your internet connection</string>
+
+	<!-- MAIN MENU -->
+	<string name="initialization">Initializing&#8230;</string>
+
+	<string name="open_map">Open Map</string>
+	<string name="invitations">Invitations</string>
+	<string name="notifications">Notifications</string>
+	<string name="start_event">Start new event</string>
+	<string name="search_for_events">Search for events</string>
+	<string name="my_events">My events</string>
+	<string name="my_contacts">My contacts</string>
+	<string name="my_account">My account</string>
+
+	<!-- EVENTS -->
+	<string name="generic">Generic</string>
+	<string name="generic_desc">Select area on the and let Looter generate events in random locations</string>
+	<string name="user_defined">User-defined</string>
+	<string name="user_defined_desc">Manually select points and other event details</string>
+
+	<string name="event_description">Description</string>
+	<string name="event_start_time">Starts at</string>
+	<string name="event_end_time">Finishes at</string>
+
+	<!-- MAP -->
+	<string name="title_activity_map">Map</string>
+
+	<!-- INVITATIONS -->
+	<string name="invitation_fetching">Fetching invitations&#8230;</string>
+	<string name="invitation_accepting">Accepting invitation&#8230;</string>
+	<string name="invitation_rejecting">Rejecting invitation&#8230;</string>
+	<string name="invitation_inviter">From </string>
+	<string name="invitation_accept">Accept</string>
+	<string name="invitation_reject">Reject</string>
+	<string name="invitation_accepted">Invitation accepted</string>
+	<string name="invitation_rejected">Invitation rejected</string>
+	<string name="level">Level</string>
+
 </resources>

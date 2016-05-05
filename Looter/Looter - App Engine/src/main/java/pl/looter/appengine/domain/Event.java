@@ -1,5 +1,6 @@
 package pl.looter.appengine.domain;
 
+import com.googlecode.objectify.Ref;
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
 
@@ -14,27 +15,37 @@ import lombok.Data;
 public class Event {
 
 	@Id
-	private Long id;
+	Long id;
+
+	private Ref<User> master;
 
 	private String title;
 
 	private String description;
+
+	private boolean open;
 	
 	private Date startTime;
 
 	private Date endTime;
-	
-	private Long masterId;
 
-	private List<EventParticipation> participants;
+	public Event() {
 
-	public Event(String title, String description, Date startTime, Date endTime, Long masterId) {
+	}
+
+	public Event(String title, String description, Date startTime, Date endTime, User master) {
 		this.title = title;
 		this.description = description;
 		this.startTime = startTime;
 		this.endTime = endTime;
-		this.masterId = masterId;
-		this.participants = new ArrayList<>();
+		this.master = Ref.create(master);
 	}
 
+	public User getMaster() {
+		return master.get();
+	}
+
+	public void setMaster(User master) {
+		this.master = Ref.create(master);
+	}
 }

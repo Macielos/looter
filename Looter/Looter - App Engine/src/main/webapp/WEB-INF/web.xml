@@ -14,16 +14,21 @@
         <init-param>
             <param-name>services</param-name>
             <param-value>pl.looter.appengine.RegistrationEndpoint,
-                pl.looter.appengine.MessagingEndpoint, pl.looter.appengine.endpoints.UserEndpoint,
+                pl.looter.appengine.MessagingEndpoint,
+                pl.looter.appengine.endpoints.UserEndpoint,
                 pl.looter.appengine.endpoints.EventEndpoint,
-                pl.looter.appengine.endpoints.InvitationEndpoint,
-                pl.looter.appengine.endpoints.PointEndpoint</param-value>
+                pl.looter.appengine.endpoints.PointEndpoint,
+                pl.looter.appengine.endpoints.EventParticipationEndpoint</param-value>
         </init-param>
     </servlet>
     <servlet-mapping>
         <servlet-name>SystemServiceServlet</servlet-name>
         <url-pattern>/_ah/spi/*</url-pattern>
     </servlet-mapping>
+
+    <listener>
+        <listener-class>pl.looter.appengine.startup.Initializer</listener-class>
+    </listener>
 
     <welcome-file-list>
         <welcome-file>index.html</welcome-file>
