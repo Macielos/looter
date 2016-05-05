@@ -39,8 +39,8 @@ public class Initializer implements ServletContextListener {
 
         User user1 = userEndpoint.insert(new User("Aristaeus", "qwerty"));
         User user2 = userEndpoint.insert(new User("Orestes", "zxcvbn"));
-        Event event1 = eventEndpoint.insert(new Event("napierdalanie nieumarłych", "Miecze w dłoń i do boju", new Date(TimeUtils.daysAgo(-1)), new Date(TimeUtils.daysAgo(-3)), user1));
-        Event event2 = eventEndpoint.insert(new Event("napierdalanie inkwizytorow", "Bić skurwysynów", new Date(TimeUtils.daysAgo(-1)), new Date(TimeUtils.daysAgo(-3)), user2));
+        Event event1 = eventEndpoint.insert(new Event("napierdalanie nieumarłych", "Miecze w dłoń i do boju", new Date(TimeUtils.daysAgo(-1)), new Date(TimeUtils.daysAgo(-3)), user1.getId()));
+        Event event2 = eventEndpoint.insert(new Event("napierdalanie inkwizytorow", "Bić skurwysynów", new Date(TimeUtils.daysAgo(-1)), new Date(TimeUtils.daysAgo(-3)), user2.getId()));
         EventParticipation invitation = eventParticipationEndpoint.insert(new EventParticipation(user2, user1, event1));
         EventParticipation invitation2 = eventParticipationEndpoint.insert(new EventParticipation(user1, user2, event2));
         Point point = pointEndpoint.insert(new Point(new GeoPt(52.0f, 21.0f)));

@@ -20,6 +20,13 @@
 	</fragment>
 
 	<Button
+		android:id="@+id/map_confirm_event"
+		android:layout_width="80dp"
+		android:layout_height="80dp"
+		android:text="@string/event_confirm"
+		android:layout_gravity="start|bottom"/>
+
+	<Button
 		android:id="@+id/map_back"
 		android:layout_width="80dp"
 		android:layout_height="80dp"

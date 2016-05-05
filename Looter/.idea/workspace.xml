@@ -6,102 +6,38 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12bd3e61-eb8b-4aa3-b9f5-16e5f6e02015" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/loading_screen.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/pl/looter/app/account/AccountActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/pl/looter/app/dataholder/DataHolder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/pl/looter/app/invitations/IOnInvitation.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/pl/looter/app/invitations/InvitationActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/pl/looter/app/invitations/InvitationListAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/pl/looter/app/main/MainActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/pl/looter/app/map/MapActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/pl/looter/utils/DateUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/pl/looter/utils/EndpointUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/pl/looter/utils/GameplayUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-v21/ic_menu_camera.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-v21/ic_menu_gallery.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-v21/ic_menu_manage.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-v21/ic_menu_send.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-v21/ic_menu_share.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-v21/ic_menu_slideshow.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/side_nav_bar.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_account.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_invitation.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main_init.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_invitation.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_invitation_details.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/values-v21/styles.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Looter - App Engine/build/classes/endpointsSrc/pl/looter/appengine/domain/eventApi/model/EventParticipation.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Looter - App Engine/build/classes/endpointsSrc/pl/looter/appengine/domain/invitationApi/InvitationApi$Builder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Looter - App Engine/build/classes/endpointsSrc/pl/looter/appengine/domain/invitationApi/InvitationApi$Get.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Looter - App Engine/build/classes/endpointsSrc/pl/looter/appengine/domain/invitationApi/InvitationApi$Insert.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Looter - App Engine/build/classes/endpointsSrc/pl/looter/appengine/domain/invitationApi/InvitationApi$List.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Looter - App Engine/build/classes/endpointsSrc/pl/looter/appengine/domain/invitationApi/InvitationApi$Patch.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Looter - App Engine/build/classes/endpointsSrc/pl/looter/appengine/domain/invitationApi/InvitationApi$Remove.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Looter - App Engine/build/classes/endpointsSrc/pl/looter/appengine/domain/invitationApi/InvitationApi$Update.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Looter - App Engine/build/classes/endpointsSrc/pl/looter/appengine/domain/invitationApi/InvitationApi.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Looter - App Engine/build/classes/endpointsSrc/pl/looter/appengine/domain/invitationApi/InvitationApiRequest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Looter - App Engine/build/classes/endpointsSrc/pl/looter/appengine/domain/invitationApi/InvitationApiRequestInitializer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Looter - App Engine/build/classes/endpointsSrc/pl/looter/appengine/domain/invitationApi/InvitationApiScopes.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Looter - App Engine/build/classes/endpointsSrc/pl/looter/appengine/domain/invitationApi/model/CollectionResponseInvitation.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Looter - App Engine/build/classes/endpointsSrc/pl/looter/appengine/domain/invitationApi/model/Invitation.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Looter - App Engine/build/classes/main/pl/looter/appengine/domain/Invitation$Status.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Looter - App Engine/build/classes/main/pl/looter/appengine/domain/Invitation.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Looter - App Engine/build/classes/main/pl/looter/appengine/endpoints/InvitationEndpoint.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Looter - App Engine/build/client-libs/invitationApi-v1-java.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Looter - App Engine/build/generated-source/endpoints/java/pl/looter/appengine/domain/eventApi/model/EventParticipation.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Looter - App Engine/build/generated-source/endpoints/java/pl/looter/appengine/domain/invitationApi/InvitationApi.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Looter - App Engine/build/generated-source/endpoints/java/pl/looter/appengine/domain/invitationApi/InvitationApiRequest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Looter - App Engine/build/generated-source/endpoints/java/pl/looter/appengine/domain/invitationApi/InvitationApiRequestInitializer.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Looter - App Engine/build/generated-source/endpoints/java/pl/looter/appengine/domain/invitationApi/InvitationApiScopes.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Looter - App Engine/build/generated-source/endpoints/java/pl/looter/appengine/domain/invitationApi/model/CollectionResponseInvitation.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Looter - App Engine/build/generated-source/endpoints/java/pl/looter/appengine/domain/invitationApi/model/Invitation.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Looter - App Engine/build/tmp/appengineEndpointsExpandClientLibs/eventApi-v1-java.zip-unzipped/eventApi/src/main/java/pl/looter/appengine/domain/eventApi/model/EventParticipation.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Looter - App Engine/build/tmp/appengineEndpointsExpandClientLibs/invitationApi-v1-java.zip-unzipped/invitationApi/LICENSE.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Looter - App Engine/build/tmp/appengineEndpointsExpandClientLibs/invitationApi-v1-java.zip-unzipped/invitationApi/build.gradle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Looter - App Engine/build/tmp/appengineEndpointsExpandClientLibs/invitationApi-v1-java.zip-unzipped/invitationApi/proguard-google-api-client.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Looter - App Engine/build/tmp/appengineEndpointsExpandClientLibs/invitationApi-v1-java.zip-unzipped/invitationApi/readme.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Looter - App Engine/build/tmp/appengineEndpointsExpandClientLibs/invitationApi-v1-java.zip-unzipped/invitationApi/src/main/java/pl/looter/appengine/domain/invitationApi/InvitationApi.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Looter - App Engine/build/tmp/appengineEndpointsExpandClientLibs/invitationApi-v1-java.zip-unzipped/invitationApi/src/main/java/pl/looter/appengine/domain/invitationApi/InvitationApiRequest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Looter - App Engine/build/tmp/appengineEndpointsExpandClientLibs/invitationApi-v1-java.zip-unzipped/invitationApi/src/main/java/pl/looter/appengine/domain/invitationApi/InvitationApiRequestInitializer.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Looter - App Engine/build/tmp/appengineEndpointsExpandClientLibs/invitationApi-v1-java.zip-unzipped/invitationApi/src/main/java/pl/looter/appengine/domain/invitationApi/InvitationApiScopes.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Looter - App Engine/build/tmp/appengineEndpointsExpandClientLibs/invitationApi-v1-java.zip-unzipped/invitationApi/src/main/java/pl/looter/appengine/domain/invitationApi/model/CollectionResponseInvitation.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Looter - App Engine/build/tmp/appengineEndpointsExpandClientLibs/invitationApi-v1-java.zip-unzipped/invitationApi/src/main/java/pl/looter/appengine/domain/invitationApi/model/Invitation.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Looter - App Engine/src/main/java/pl/looter/appengine/domain/Invitation.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Looter - App Engine/src/main/java/pl/looter/appengine/endpoints/InvitationEndpoint.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/pl/looter/MainActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/pl/looter/MapActivity.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Looter - App Engine/build/classes/endpointsSrc/pl/looter/appengine/domain/eventApi/EventApi$Builder.class" afterPath="$PROJECT_DIR$/Looter - App Engine/build/classes/endpointsSrc/pl/looter/appengine/domain/eventApi/EventApi$Builder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Looter - App Engine/build/classes/endpointsSrc/pl/looter/appengine/domain/eventApi/EventApi.class" afterPath="$PROJECT_DIR$/Looter - App Engine/build/classes/endpointsSrc/pl/looter/appengine/domain/eventApi/EventApi.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/pl/looter/app/event/EventCreationActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/pl/looter/utils/Constants.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_event_creation.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/cache.properties.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileHashes.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileSnapshots.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/outputFileStates.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/taskArtifacts.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugAndroidTestJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugAndroidTestJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugAndroidTestJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugAndroidTestJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugAndroidTestJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugAndroidTestJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugUnitTestJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugUnitTestJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugUnitTestJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugUnitTestJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugUnitTestJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugUnitTestJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Looter - App Engine/build/classes/endpointsSrc/pl/looter/appengine/domain/eventApi/model/Event.class" afterPath="$PROJECT_DIR$/Looter - App Engine/build/classes/endpointsSrc/pl/looter/appengine/domain/eventApi/model/Event.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Looter - App Engine/build/classes/endpointsSrc/pl/looter/appengine/domain/pointApi/PointApi$Builder.class" afterPath="$PROJECT_DIR$/Looter - App Engine/build/classes/endpointsSrc/pl/looter/appengine/domain/pointApi/PointApi$Builder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Looter - App Engine/build/classes/endpointsSrc/pl/looter/appengine/domain/pointApi/PointApi.class" afterPath="$PROJECT_DIR$/Looter - App Engine/build/classes/endpointsSrc/pl/looter/appengine/domain/pointApi/PointApi.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Looter - App Engine/build/classes/endpointsSrc/pl/looter/appengine/domain/pointApi/model/Point.class" afterPath="$PROJECT_DIR$/Looter - App Engine/build/classes/endpointsSrc/pl/looter/appengine/domain/pointApi/model/Point.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Looter - App Engine/build/classes/endpointsSrc/pl/looter/appengine/messaging/Messaging$Builder.class" afterPath="$PROJECT_DIR$/Looter - App Engine/build/classes/endpointsSrc/pl/looter/appengine/messaging/Messaging$Builder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Looter - App Engine/build/classes/endpointsSrc/pl/looter/appengine/messaging/Messaging.class" afterPath="$PROJECT_DIR$/Looter - App Engine/build/classes/endpointsSrc/pl/looter/appengine/messaging/Messaging.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Looter - App Engine/build/classes/endpointsSrc/pl/looter/appengine/registration/Registration$Builder.class" afterPath="$PROJECT_DIR$/Looter - App Engine/build/classes/endpointsSrc/pl/looter/appengine/registration/Registration$Builder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Looter - App Engine/build/classes/endpointsSrc/pl/looter/appengine/registration/Registration.class" afterPath="$PROJECT_DIR$/Looter - App Engine/build/classes/endpointsSrc/pl/looter/appengine/registration/Registration.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Looter - App Engine/build/classes/endpointsSrc/pl/looter/appengine/userApi/UserApi$Builder.class" afterPath="$PROJECT_DIR$/Looter - App Engine/build/classes/endpointsSrc/pl/looter/appengine/userApi/UserApi$Builder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Looter - App Engine/build/classes/endpointsSrc/pl/looter/appengine/userApi/UserApi$Patch.class" afterPath="$PROJECT_DIR$/Looter - App Engine/build/classes/endpointsSrc/pl/looter/appengine/userApi/UserApi$Patch.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Looter - App Engine/build/classes/endpointsSrc/pl/looter/appengine/userApi/UserApi$Remove.class" afterPath="$PROJECT_DIR$/Looter - App Engine/build/classes/endpointsSrc/pl/looter/appengine/userApi/UserApi$Remove.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Looter - App Engine/build/classes/endpointsSrc/pl/looter/appengine/userApi/UserApi$Update.class" afterPath="$PROJECT_DIR$/Looter - App Engine/build/classes/endpointsSrc/pl/looter/appengine/userApi/UserApi$Update.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Looter - App Engine/build/classes/endpointsSrc/pl/looter/appengine/userApi/UserApi.class" afterPath="$PROJECT_DIR$/Looter - App Engine/build/classes/endpointsSrc/pl/looter/appengine/userApi/UserApi.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Looter - App Engine/build/classes/main/pl/looter/appengine/OfyService.class" afterPath="$PROJECT_DIR$/Looter - App Engine/build/classes/main/pl/looter/appengine/OfyService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Looter - App Engine/build/classes/main/pl/looter/appengine/domain/Event.class" afterPath="$PROJECT_DIR$/Looter - App Engine/build/classes/main/pl/looter/appengine/domain/Event.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Looter - App Engine/build/classes/main/pl/looter/appengine/domain/EventParticipation.class" afterPath="$PROJECT_DIR$/Looter - App Engine/build/classes/main/pl/looter/appengine/domain/EventParticipation.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Looter - App Engine/build/classes/main/pl/looter/appengine/domain/Point.class" afterPath="$PROJECT_DIR$/Looter - App Engine/build/classes/main/pl/looter/appengine/domain/Point.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Looter - App Engine/build/classes/main/pl/looter/appengine/domain/User.class" afterPath="$PROJECT_DIR$/Looter - App Engine/build/classes/main/pl/looter/appengine/domain/User.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Looter - App Engine/build/classes/main/pl/looter/appengine/endpoints/UserEndpoint.class" afterPath="$PROJECT_DIR$/Looter - App Engine/build/classes/main/pl/looter/appengine/endpoints/UserEndpoint.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Looter - App Engine/build/client-libs/eventApi-v1-java.zip" afterPath="$PROJECT_DIR$/Looter - App Engine/build/client-libs/eventApi-v1-java.zip" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Looter - App Engine/build/client-libs/messaging-v1-java.zip" afterPath="$PROJECT_DIR$/Looter - App Engine/build/client-libs/messaging-v1-java.zip" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Looter - App Engine/build/client-libs/pointApi-v1-java.zip" afterPath="$PROJECT_DIR$/Looter - App Engine/build/client-libs/pointApi-v1-java.zip" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Looter - App Engine/build/client-libs/registration-v1-java.zip" afterPath="$PROJECT_DIR$/Looter - App Engine/build/client-libs/registration-v1-java.zip" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Looter - App Engine/build/client-libs/userApi-v1-java.zip" afterPath="$PROJECT_DIR$/Looter - App Engine/build/client-libs/userApi-v1-java.zip" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Looter - App Engine/build/libs/Looter - App Engine-android-endpoints.jar" afterPath="$PROJECT_DIR$/Looter - App Engine/build/libs/Looter - App Engine-android-endpoints.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Looter - App Engine/build/generated-source/endpoints/java/pl/looter/appengine/domain/eventApi/EventApi.java" afterPath="$PROJECT_DIR$/Looter - App Engine/build/generated-source/endpoints/java/pl/looter/appengine/domain/eventApi/EventApi.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Looter - App Engine/build/generated-source/endpoints/java/pl/looter/appengine/domain/eventApi/EventApiRequest.java" afterPath="$PROJECT_DIR$/Looter - App Engine/build/generated-source/endpoints/java/pl/looter/appengine/domain/eventApi/EventApiRequest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Looter - App Engine/build/generated-source/endpoints/java/pl/looter/appengine/domain/eventApi/EventApiRequestInitializer.java" afterPath="$PROJECT_DIR$/Looter - App Engine/build/generated-source/endpoints/java/pl/looter/appengine/domain/eventApi/EventApiRequestInitializer.java" />
@@ -158,23 +94,18 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Looter - App Engine/build/tmp/appengineEndpointsExpandClientLibs/userApi-v1-java.zip-unzipped/userApi/src/main/java/pl/looter/appengine/userApi/UserApiScopes.java" afterPath="$PROJECT_DIR$/Looter - App Engine/build/tmp/appengineEndpointsExpandClientLibs/userApi-v1-java.zip-unzipped/userApi/src/main/java/pl/looter/appengine/userApi/UserApiScopes.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Looter - App Engine/build/tmp/appengineEndpointsExpandClientLibs/userApi-v1-java.zip-unzipped/userApi/src/main/java/pl/looter/appengine/userApi/model/CollectionResponseUser.java" afterPath="$PROJECT_DIR$/Looter - App Engine/build/tmp/appengineEndpointsExpandClientLibs/userApi-v1-java.zip-unzipped/userApi/src/main/java/pl/looter/appengine/userApi/model/CollectionResponseUser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Looter - App Engine/build/tmp/appengineEndpointsExpandClientLibs/userApi-v1-java.zip-unzipped/userApi/src/main/java/pl/looter/appengine/userApi/model/User.java" afterPath="$PROJECT_DIR$/Looter - App Engine/build/tmp/appengineEndpointsExpandClientLibs/userApi-v1-java.zip-unzipped/userApi/src/main/java/pl/looter/appengine/userApi/model/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Looter - App Engine/src/main/java/pl/looter/appengine/OfyService.java" afterPath="$PROJECT_DIR$/Looter - App Engine/src/main/java/pl/looter/appengine/OfyService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Looter - App Engine/src/main/java/pl/looter/appengine/domain/Event.java" afterPath="$PROJECT_DIR$/Looter - App Engine/src/main/java/pl/looter/appengine/domain/Event.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Looter - App Engine/src/main/java/pl/looter/appengine/domain/EventParticipation.java" afterPath="$PROJECT_DIR$/Looter - App Engine/src/main/java/pl/looter/appengine/domain/EventParticipation.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Looter - App Engine/src/main/java/pl/looter/appengine/domain/Point.java" afterPath="$PROJECT_DIR$/Looter - App Engine/src/main/java/pl/looter/appengine/domain/Point.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Looter - App Engine/src/main/java/pl/looter/appengine/domain/User.java" afterPath="$PROJECT_DIR$/Looter - App Engine/src/main/java/pl/looter/appengine/domain/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Looter - App Engine/src/main/java/pl/looter/appengine/endpoints/UserEndpoint.java" afterPath="$PROJECT_DIR$/Looter - App Engine/src/main/java/pl/looter/appengine/endpoints/UserEndpoint.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Looter - App Engine/src/main/webapp/WEB-INF/appengine-web.xml" afterPath="$PROJECT_DIR$/Looter - App Engine/src/main/webapp/WEB-INF/appengine-web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Looter - App Engine/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/Looter - App Engine/src/main/webapp/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Looter - App Engine/src/main/java/pl/looter/appengine/endpoints/EventParticipationEndpoint.java" afterPath="$PROJECT_DIR$/Looter - App Engine/src/main/java/pl/looter/appengine/endpoints/EventParticipationEndpoint.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Looter - App Engine/src/main/java/pl/looter/appengine/startup/Initializer.java" afterPath="$PROJECT_DIR$/Looter - App Engine/src/main/java/pl/looter/appengine/startup/Initializer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/pl/looter/app/dataholder/DataHolder.java" afterPath="$PROJECT_DIR$/app/src/main/java/pl/looter/app/dataholder/DataHolder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/pl/looter/app/main/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/pl/looter/app/main/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/pl/looter/app/map/MapActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/pl/looter/app/map/MapActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/pl/looter/utils/EndpointUtils.java" afterPath="$PROJECT_DIR$/app/src/main/java/pl/looter/utils/EndpointUtils.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_map.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_map.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values-w820dp/dimens.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values-w820dp/dimens.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
     </list>
     <ignored path="Looter.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -215,15 +146,40 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="EndpointUtils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/pl/looter/utils/EndpointUtils.java">
+      <file leaf-file-name="activity_event_creation.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_event_creation.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="63" column="57" selection-start-line="63" selection-start-column="57" selection-end-line="63" selection-end-column="57" />
+            <state vertical-scroll-proportion="-0.92727274">
+              <caret line="6" column="40" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#287#320#0" expanded="true" />
+                <element signature="e#342#377#0" expanded="true" />
+                <element signature="e#400#435#0" expanded="true" />
+                <element signature="e#456#489#0" expanded="true" />
+                <element signature="e#818#839#0" expanded="true" />
+                <element signature="e#1115#1135#0" expanded="true" />
+                <element signature="e#1414#1432#0" expanded="true" />
+                <element signature="e#1574#1588#0" expanded="true" />
               </folding>
             </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_map.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_map.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.2181816">
+              <caret line="35" column="14" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
+              <folding>
+                <element signature="e#1160#1183#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
           </provider>
         </entry>
       </file>
@@ -231,110 +187,76 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/pl/looter/app/main/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="83" column="22" selection-start-line="83" selection-start-column="22" selection-end-line="83" selection-end-column="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EventParticipationEndpoint.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Looter - App Engine/src/main/java/pl/looter/appengine/endpoints/EventParticipationEndpoint.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="182" column="54" selection-start-line="182" selection-start-column="54" selection-end-line="182" selection-end-column="54" />
-              <folding>
-                <element signature="e#6836#6856#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserApi.class" pinned="false" current-in-tab="true">
-        <entry file="jar://$PROJECT_DIR$/Looter - App Engine/build/libs/Looter - App Engine-android-endpoints.jar!/pl/looter/appengine/userApi/UserApi.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.1487965">
-              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#17719#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="appengine-web.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Looter - App Engine/src/main/webapp/WEB-INF/appengine-web.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="96" column="22" selection-start-line="96" selection-start-column="22" selection-end-line="96" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InvitationActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/pl/looter/app/invitations/InvitationActivity.java">
+      <file leaf-file-name="MapActivity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/pl/looter/app/map/MapActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.6554217">
+              <caret line="129" column="0" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1562#1601#0" expanded="true" />
-                <element signature="e#2511#2547#0" expanded="true" />
-                <element signature="e#2615#2640#0" expanded="true" />
-                <element signature="e#3274#3314#0" expanded="true" />
-                <element signature="e#3741#3780#0" expanded="true" />
-                <element signature="e#3904#3944#0" expanded="true" />
-                <element signature="e#4371#4410#0" expanded="true" />
+                <element signature="e#4698#4699#0" expanded="true" />
+                <element signature="e#4753#4754#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InvitationListAdapter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/pl/looter/app/invitations/InvitationListAdapter.java">
+      <file leaf-file-name="Point.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Looter - App Engine/src/main/java/pl/looter/appengine/domain/Point.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="121" column="0" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
+              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#837#838#0" expanded="true" />
-                <element signature="e#874#875#0" expanded="true" />
-                <element signature="e#2885#2932#0" expanded="true" />
-                <element signature="e#4092#4325#0" expanded="true" />
-                <element signature="e#4324#4325#0" expanded="true" />
+                <element signature="e#656#657#0" expanded="true" />
+                <element signature="e#708#709#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IOnInvitation.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/pl/looter/app/invitations/IOnInvitation.java">
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Looter - App Engine/src/main/java/pl/looter/appengine/domain/User.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DataHolder.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/pl/looter/app/dataholder/DataHolder.java">
+      <file leaf-file-name="EventParticipation.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Looter - App Engine/src/main/java/pl/looter/appengine/domain/EventParticipation.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <caret line="67" column="1" selection-start-line="67" selection-start-column="1" selection-end-line="67" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EventCreationActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/pl/looter/app/event/EventCreationActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="50" column="32" selection-start-line="50" selection-start-column="32" selection-end-line="50" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#704#705#0" expanded="true" />
-                <element signature="e#729#730#0" expanded="true" />
-                <element signature="e#885#886#0" expanded="true" />
-                <element signature="e#907#908#0" expanded="true" />
-                <element signature="e#970#971#0" expanded="true" />
-                <element signature="e#1001#1002#0" expanded="true" />
-                <element signature="e#1056#1057#0" expanded="true" />
-                <element signature="e#1083#1084#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Event.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Looter - App Engine/src/main/java/pl/looter/appengine/domain/Event.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -343,7 +265,7 @@
         <entry file="file://$PROJECT_DIR$/Looter - App Engine/src/main/java/pl/looter/appengine/startup/Initializer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="46" column="25" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
+              <caret line="45" column="79" selection-start-line="45" selection-start-column="79" selection-end-line="45" selection-end-column="79" />
               <folding />
             </state>
           </provider>
@@ -354,8 +276,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -3078,9 +3000,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Looter - App Engine/build.gradle" />
-        <option value="$PROJECT_DIR$/Looter - App Engine/src/main/java/pl/looter/appengine/MessagingEndpoint.java" />
-        <option value="$PROJECT_DIR$/Looter - App Engine/src/main/java/pl/looter/appengine/RegistrationEndpoint.java" />
         <option value="$PROJECT_DIR$/Looter - App Engine/src/main/java/pl/looter/appengine/domain/EventEndpoint.java" />
         <option value="$PROJECT_DIR$/Looter - App Engine/src/main/java/pl/looter/appengine/domain/InvitationEndpoint.java" />
         <option value="$PROJECT_DIR$/Looter - App Engine/src/main/java/pl/looter/appengine/domain/PointEndpoint.java" />
@@ -3098,7 +3017,6 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/item_invitation.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/pl/looter/utils/DateUtils.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main_init.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/item_invitation_details.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/pl/looter/utils/GameplayUtils.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/pl/looter/app/account/AccountActivity.java" />
@@ -3107,28 +3025,32 @@
         <option value="$PROJECT_DIR$/Looter - App Engine/src/main/java/pl/looter/appengine/endpoints/EventEndpoint.java" />
         <option value="$PROJECT_DIR$/Looter - App Engine/src/main/java/pl/looter/appengine/endpoints/UserEndpoint.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_invitation.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_map.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/pl/looter/app/map/MapActivity.java" />
         <option value="$PROJECT_DIR$/Looter - App Engine/src/main/java/pl/looter/appengine/domain/Message.java" />
         <option value="$PROJECT_DIR$/Looter - App Engine/src/main/java/pl/looter/appengine/domain/EventParticipation2.java" />
         <option value="$PROJECT_DIR$/Looter - App Engine/src/main/java/pl/looter/appengine/domain/Loot.java" />
-        <option value="$PROJECT_DIR$/Looter - App Engine/src/main/java/pl/looter/appengine/domain/Event.java" />
-        <option value="$PROJECT_DIR$/Looter - App Engine/src/main/java/pl/looter/appengine/domain/Point.java" />
         <option value="$PROJECT_DIR$/Looter - App Engine/src/main/java/pl/looter/appengine/domain/Invitation.java" />
         <option value="$PROJECT_DIR$/Looter - App Engine/src/main/java/pl/looter/appengine/endpoints/InvitationEndpoint.java" />
         <option value="$PROJECT_DIR$/Looter - App Engine/src/main/java/pl/looter/appengine/domain/EventParticipationEndpoint.java" />
-        <option value="$PROJECT_DIR$/Looter - App Engine/src/main/java/pl/looter/appengine/endpoints/EventParticipationEndpoint.java" />
         <option value="$PROJECT_DIR$/Looter - App Engine/src/main/java/pl/looter/appengine/domain/EventParticipation.java" />
-        <option value="$PROJECT_DIR$/Looter - App Engine/src/main/java/pl/looter/appengine/startup/Initializer.java" />
         <option value="$PROJECT_DIR$/Looter - App Engine/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/pl/looter/app/dataholder/DataHolder.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/pl/looter/app/invitations/IOnInvitation.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/pl/looter/app/invitations/InvitationListAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/pl/looter/utils/EndpointUtils.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/pl/looter/app/invitations/EventParticipationActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/pl/looter/app/invitations/InvitationActivity.java" />
+        <option value="$PROJECT_DIR$/Looter - App Engine/src/main/java/pl/looter/appengine/endpoints/EventParticipationEndpoint.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/pl/looter/utils/Constants.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/pl/looter/utils/EndpointUtils.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/pl/looter/app/dataholder/DataHolder.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/Looter - App Engine/src/main/java/pl/looter/appengine/domain/Event.java" />
+        <option value="$PROJECT_DIR$/Looter - App Engine/src/main/java/pl/looter/appengine/startup/Initializer.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/pl/looter/app/event/EventCreationActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/pl/looter/app/main/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_invitation.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_event_creation.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_map.xml" />
+        <option value="$PROJECT_DIR$/Looter - App Engine/src/main/java/pl/looter/appengine/domain/Point.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/pl/looter/app/map/MapActivity.java" />
       </list>
     </option>
   </component>
@@ -3236,6 +3158,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -3398,6 +3321,40 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Looter - App Engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="appengine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="domain" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Looter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Looter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -3509,6 +3466,48 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="map" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Looter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Looter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="looter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -3582,14 +3581,90 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="event" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Looter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Looter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="looter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="dataholder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Looter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Looter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="looter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="account" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -3600,7 +3675,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -3617,6 +3691,7 @@
       <recent name="pl.looter" />
     </key>
     <key name="android.template.packageName">
+      <recent name="pl.looter.app.event" />
       <recent name="pl.looter.app.account" />
       <recent name="pl.looter" />
       <recent name="pl.looter.activities" />
@@ -3966,32 +4041,41 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="1" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.49755502" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.49511003" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.49022004" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39976957" sideWeight="0.58801955" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39976957" sideWeight="0.56723714" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2497332" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44994375" sideWeight="0.6579509" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30937973" sideWeight="0.51399493" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30937973" sideWeight="0.51399493" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41013825" sideWeight="0.5727384" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle Console" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41013825" sideWeight="0.5764059" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.48963133" sideWeight="0.6314181" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295838" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30937973" sideWeight="0.51399493" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41013825" sideWeight="0.42359412" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30937973" sideWeight="0.51399493" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41013825" sideWeight="0.4180929" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294621" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.49755502" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26528117" sideWeight="0.4860051" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48963133" sideWeight="0.3777506" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23288509" sideWeight="0.4860051" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.48963133" sideWeight="0.36858192" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -3999,36 +4083,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32949308" sideWeight="0.49755502" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32949308" sideWeight="0.502445" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.50687283" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294621" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.49312714" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.49755502" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.49511003" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -4043,18 +4097,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="14" />
+      <option name="time" value="17" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/debug/res/values/google_maps_api.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.61174244">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.googlecode.objectify/objectify/5.1.9/a0a4b19de216c12782ea6810a731c04dfd0863f2/objectify-5.1.9-sources.jar!/com/googlecode/objectify/annotation/Load.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -4108,32 +4155,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.8414633">
           <caret line="23" column="44" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
-          <folding>
-            <element signature="e#270#303#0" expanded="true" />
-            <element signature="e#328#363#0" expanded="true" />
-            <element signature="e#389#424#0" expanded="true" />
-            <element signature="e#448#481#0" expanded="true" />
-            <element signature="e#948#972#0" expanded="true" />
-          </folding>
         </state>
       </provider>
       <provider editor-type-id="android-designer">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.2830188">
-          <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_invitation_details.xml">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="110" column="0" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="android-designer">
@@ -4151,16 +4182,6 @@
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#442#475#0" expanded="true" />
-            <element signature="e#512#547#0" expanded="true" />
-            <element signature="e#585#620#0" expanded="true" />
-            <element signature="e#656#689#0" expanded="true" />
-            <element signature="e#854#869#0" expanded="true" />
-            <element signature="e#1181#1196#0" expanded="true" />
-            <element signature="e#2041#2056#0" expanded="true" />
-            <element signature="e#2345#2359#0" expanded="true" />
-          </folding>
         </state>
       </provider>
       <provider selected="true" editor-type-id="android-designer">
@@ -4216,7 +4237,6 @@
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="30" column="49" selection-start-line="30" selection-start-column="49" selection-end-line="30" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="android-designer">
@@ -4256,7 +4276,7 @@
         <state vertical-scroll-proportion="-9.153846">
           <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding>
-            <element signature="e#1904#1929#0" expanded="true" />
+            <element signature="e#1904#1929#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -4268,66 +4288,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Looter - App Engine/src/main/java/pl/looter/appengine/domain/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_invitation.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.709091">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding>
-            <element signature="e#272#305#0" expanded="true" />
-            <element signature="e#330#365#0" expanded="true" />
-            <element signature="e#391#426#0" expanded="true" />
-            <element signature="e#450#483#0" expanded="true" />
-            <element signature="e#733#754#0" expanded="true" />
-            <element signature="e#1131#1146#0" expanded="true" />
-            <element signature="e#1770#1784#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_account.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.709091">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_map.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.4">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-          <folding>
-            <element signature="e#492#525#0" expanded="true" />
-            <element signature="e#1151#1165#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/pl/looter/app/map/MapActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="102" column="5" selection-start-line="102" selection-start-column="5" selection-end-line="102" selection-end-column="5" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.googlecode.objectify/objectify/5.1.9/a0a4b19de216c12782ea6810a731c04dfd0863f2/objectify-5.1.9-sources.jar!/com/googlecode/objectify/Key.java">
@@ -4354,26 +4322,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#304#305#0" expanded="true" />
-            <element signature="e#333#334#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Looter - App Engine/src/main/java/pl/looter/appengine/domain/Point.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding>
-            <element signature="e#593#594#0" expanded="true" />
-            <element signature="e#624#625#0" expanded="true" />
-            <element signature="e#656#657#0" expanded="true" />
-            <element signature="e#683#684#0" expanded="true" />
-            <element signature="e#727#728#0" expanded="true" />
-            <element signature="e#768#769#0" expanded="true" />
-            <element signature="e#800#801#0" expanded="true" />
-            <element signature="e#856#857#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#304#305#0" expanded="false" />
+            <element signature="e#333#334#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -4382,40 +4333,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#6836#6856#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Looter - App Engine/src/main/java/pl/looter/appengine/domain/EventParticipation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="23" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#846#847#0" expanded="true" />
-            <element signature="e#877#878#0" expanded="true" />
-            <element signature="e#926#927#0" expanded="true" />
-            <element signature="e#975#976#0" expanded="true" />
-            <element signature="e#1003#1004#0" expanded="true" />
-            <element signature="e#1029#1030#0" expanded="true" />
-            <element signature="e#1068#1069#0" expanded="true" />
-            <element signature="e#1107#1108#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Looter - App Engine/src/main/java/pl/looter/appengine/domain/Event.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding>
-            <element signature="e#771#772#0" expanded="true" />
-            <element signature="e#797#798#0" expanded="true" />
-            <element signature="e#836#837#0" expanded="true" />
-            <element signature="e#875#876#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -4435,35 +4353,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Looter - App Engine/src/main/java/pl/looter/appengine/startup/Initializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="46" column="25" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/pl/looter/app/dataholder/DataHolder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#704#705#0" expanded="true" />
-            <element signature="e#729#730#0" expanded="true" />
-            <element signature="e#885#886#0" expanded="true" />
-            <element signature="e#907#908#0" expanded="true" />
-            <element signature="e#970#971#0" expanded="true" />
-            <element signature="e#1001#1002#0" expanded="true" />
-            <element signature="e#1056#1057#0" expanded="true" />
-            <element signature="e#1083#1084#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/pl/looter/app/invitations/IOnInvitation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.27586207">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
         </state>
@@ -4471,50 +4363,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/pl/looter/app/invitations/InvitationListAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="3.689655">
           <caret line="121" column="0" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#837#838#0" expanded="true" />
             <element signature="e#874#875#0" expanded="true" />
-            <element signature="e#2885#2932#0" expanded="true" />
-            <element signature="e#4092#4325#0" expanded="true" />
-            <element signature="e#4324#4325#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/pl/looter/utils/EndpointUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="63" column="57" selection-start-line="63" selection-start-column="57" selection-end-line="63" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/pl/looter/app/invitations/InvitationActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.86206895">
           <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1562#1601#0" expanded="true" />
-            <element signature="e#2511#2547#0" expanded="true" />
-            <element signature="e#2615#2640#0" expanded="true" />
-            <element signature="e#3274#3314#0" expanded="true" />
-            <element signature="e#3741#3780#0" expanded="true" />
-            <element signature="e#3904#3944#0" expanded="true" />
-            <element signature="e#4371#4410#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/pl/looter/app/main/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="83" column="22" selection-start-line="83" selection-start-column="22" selection-end-line="83" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -4523,20 +4385,192 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Looter - App Engine/src/main/java/pl/looter/appengine/endpoints/EventParticipationEndpoint.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6551724">
+          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/pl/looter/utils/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="182" column="54" selection-start-line="182" selection-start-column="54" selection-end-line="182" selection-end-column="54" />
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/pl/looter/utils/EndpointUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
           <folding>
-            <element signature="e#6836#6856#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/Looter - App Engine/build/libs/Looter - App Engine-android-endpoints.jar!/pl/looter/appengine/userApi/UserApi.class">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/pl/looter/app/dataholder/DataHolder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1487965">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
           <folding>
-            <element signature="e#0#17719#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#765#766#0" expanded="true" />
+            <element signature="e#788#789#0" expanded="true" />
+            <element signature="e#843#844#0" expanded="true" />
+            <element signature="e#885#886#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_event_creation.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#287#320#0" expanded="true" />
+            <element signature="e#342#377#0" expanded="true" />
+            <element signature="e#400#435#0" expanded="true" />
+            <element signature="e#456#489#0" expanded="true" />
+            <element signature="e#818#839#0" expanded="true" />
+            <element signature="e#1115#1135#0" expanded="true" />
+            <element signature="e#1414#1432#0" expanded="true" />
+            <element signature="e#1574#1588#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.867925">
+          <caret line="46" column="39" selection-start-line="46" selection-start-column="39" selection-end-line="46" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Looter - App Engine/src/main/java/pl/looter/appengine/domain/Event.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Looter - App Engine/src/main/java/pl/looter/appengine/startup/Initializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="45" column="79" selection-start-line="45" selection-start-column="79" selection-end-line="45" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_event_creation.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.92727274">
+          <caret line="6" column="40" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
+          <folding>
+            <element signature="e#287#320#0" expanded="true" />
+            <element signature="e#342#377#0" expanded="true" />
+            <element signature="e#400#435#0" expanded="true" />
+            <element signature="e#456#489#0" expanded="true" />
+            <element signature="e#818#839#0" expanded="true" />
+            <element signature="e#1115#1135#0" expanded="true" />
+            <element signature="e#1414#1432#0" expanded="true" />
+            <element signature="e#1574#1588#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_map.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.2181816">
+          <caret line="35" column="14" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
+          <folding>
+            <element signature="e#1160#1183#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_invitation.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.038812786">
+          <caret line="1" column="1" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
+          <folding>
+            <element signature="e#272#305#0" expanded="true" />
+            <element signature="e#330#365#0" expanded="true" />
+            <element signature="e#391#426#0" expanded="true" />
+            <element signature="e#450#483#0" expanded="true" />
+            <element signature="e#733#754#0" expanded="true" />
+            <element signature="e#1131#1146#0" expanded="true" />
+            <element signature="e#1770#1784#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/pl/looter/app/event/EventCreationActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="50" column="32" selection-start-line="50" selection-start-column="32" selection-end-line="50" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Looter - App Engine/src/main/java/pl/looter/appengine/domain/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Looter - App Engine/src/main/java/pl/looter/appengine/domain/EventParticipation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="67" column="1" selection-start-line="67" selection-start-column="1" selection-end-line="67" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Looter - App Engine/src/main/java/pl/looter/appengine/domain/Point.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding>
+            <element signature="e#656#657#0" expanded="true" />
+            <element signature="e#708#709#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/pl/looter/app/main/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="96" column="22" selection-start-line="96" selection-start-column="22" selection-end-line="96" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/pl/looter/app/map/MapActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6554217">
+          <caret line="129" column="0" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
+          <folding>
+            <element signature="e#4698#4699#0" expanded="true" />
+            <element signature="e#4753#4754#0" expanded="true" />
           </folding>
         </state>
       </provider>

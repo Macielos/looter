@@ -17,7 +17,7 @@ public class Event {
 	@Id
 	Long id;
 
-	private Ref<User> master;
+	private Long masterId;
 
 	private String title;
 
@@ -33,19 +33,12 @@ public class Event {
 
 	}
 
-	public Event(String title, String description, Date startTime, Date endTime, User master) {
+	public Event(String title, String description, Date startTime, Date endTime, Long masterId) {
 		this.title = title;
 		this.description = description;
 		this.startTime = startTime;
 		this.endTime = endTime;
-		this.master = Ref.create(master);
+		this.masterId = masterId;
 	}
 
-	public User getMaster() {
-		return master.get();
-	}
-
-	public void setMaster(User master) {
-		this.master = Ref.create(master);
-	}
 }

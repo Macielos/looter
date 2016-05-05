@@ -40,11 +40,11 @@ public class Point {
 	}
 
 	public Message getMessage() {
-		return message.get();
+		return message == null ? null : message.get();
 	}
 
 	public void setMessage(Message message) {
-		this.message = Ref.create(message);
+		this.message = message == null ? null : Ref.create(message);
 	}
 
 	public Point getNextPoint() {

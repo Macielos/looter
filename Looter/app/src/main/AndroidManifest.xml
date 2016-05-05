@@ -50,6 +50,8 @@
 		<activity android:name=".app.invitations.InvitationActivity"/>
 		<activity android:name=".app.account.AccountActivity">
 		</activity>
+		<activity android:name=".app.event.EventCreationActivity">
+		</activity>
 	</application>
 
 </manifest>

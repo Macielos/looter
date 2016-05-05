@@ -12,6 +12,7 @@ import java.io.IOException;
 
 import pl.looter.appengine.domain.eventApi.EventApi;
 import pl.looter.appengine.domain.eventParticipationApi.EventParticipationApi;
+import pl.looter.appengine.domain.pointApi.PointApi;
 import pl.looter.appengine.userApi.UserApi;
 
 /**
@@ -47,6 +48,15 @@ public abstract class EndpointUtils {
         return updateBuilder(builder).build();
     }
 
+    public static PointApi newPointApi() {
+        PointApi.Builder builder = new PointApi.Builder(AndroidHttp.newCompatibleTransport(), new JacksonFactory(),
+                new HttpRequestInitializer() {
+                    public void initialize(HttpRequest httpRequest) {
+                    }
+                });
+        return updateBuilder(builder).build();
+    }
+
     public static EventParticipationApi newEventParticipationApi() {
         EventParticipationApi.Builder builder = new EventParticipationApi.Builder(AndroidHttp.newCompatibleTransport(), new JacksonFactory(),
                 new HttpRequestInitializer() {
@@ -73,5 +83,6 @@ public abstract class EndpointUtils {
 
         return builder;
     }
+
 
 }

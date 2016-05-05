@@ -1,23 +1,13 @@
 package pl.looter.app.map;
 
-import android.Manifest;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.location.Location;
+import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 
-import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.location.LocationListener;
-import com.google.android.gms.location.LocationRequest;
-import com.google.android.gms.location.LocationServices;
-import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
@@ -25,35 +15,58 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import pl.looter.R;
+import pl.looter.app.dataholder.DataHolder;
 import pl.looter.app.main.MainActivity;
+import pl.looter.appengine.domain.eventApi.EventApi;
+import pl.looter.appengine.domain.eventApi.model.Event;
+import pl.looter.appengine.domain.pointApi.PointApi;
+import pl.looter.appengine.domain.pointApi.model.GeoPt;
+import pl.looter.appengine.domain.pointApi.model.Point;
+import pl.looter.utils.Constants;
+import pl.looter.utils.EndpointUtils;
 
-public class MapActivity extends FragmentActivity implements OnMapReadyCallback, GoogleMap.OnMapClickListener /* GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, LocationListener,*/ {
+public class MapActivity extends FragmentActivity implements OnMapReadyCallback, GoogleMap.OnMapClickListener, GoogleMap.OnMarkerClickListener /* GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, LocationListener,*/ {
 
 	private static final String TAG = MapActivity.class.getSimpleName();
 	private static final int REQUEST_CODE = 1488;
+
+	public enum MapMode {VIEW, CREATE_EVENT, SEARCH_FOR_EVENTS}
+
+	@Bind(R.id.map_confirm_event)
+	Button mapConfirmEvent;
 
 	@Bind(R.id.map_back)
 	Button mapBack;
 
 	private GoogleMap map;
 
-	private List<MarkerOptions> markers = new ArrayList<>();
+	private final EventApi eventApi = EndpointUtils.newEventApi();
+	private final PointApi pointApi = EndpointUtils.newPointApi();
+
+	private Map<String, Point> selectedPoints = new HashMap<>();
+	private MapMode mapMode;
+	private Marker selectedMarker;
 
 	//private GoogleApiClient googleApiClient;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		String modeFromIntent = getIntent().getStringExtra(Constants.MAP_MODE);
+		mapMode = modeFromIntent == null ? MapMode.VIEW : MapMode.valueOf(modeFromIntent);
+
 		setContentView(R.layout.activity_map);
 		ButterKnife.bind(this);
-		// Obtain the SupportMapFragment and get notified when the map is ready to be used.
+
+		mapConfirmEvent.setVisibility(mapMode == MapMode.CREATE_EVENT ? View.VISIBLE : View.INVISIBLE);
 		SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
 				.findFragmentById(R.id.map);
 		mapFragment.getMapAsync(this);
@@ -73,6 +86,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
 		map = googleMap;
 
 		map.setOnMapClickListener(this);
+		map.setOnMarkerClickListener(this);
 
 	/*
 		googleApiClient = new GoogleApiClient.Builder(this)
@@ -96,21 +110,65 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
 		setCameraTrackUserLocation();*/
 	}
 
+	@OnClick(R.id.map_confirm_event)
+	public void onMapConfirmEventClick() {
+		new AsyncTask<Void, Void, Event>() {
+
+			@Override
+			protected Event doInBackground(Void... params) {
+				try {
+					Event event = eventApi.insert(DataHolder.getInstance().getLastEvent()).execute();
+					for(Point point: selectedPoints.values()) {
+						pointApi.insert(point.setEventId(event.getId())).execute();
+					}
+					return event;
+				} catch (IOException e) {
+					Log.e(TAG, "Failed to insert event "+DataHolder.getInstance().getLastEvent()+" with points "+selectedPoints, e);
+				}
+				return null;
+			}
+
+			@Override
+			protected void onPostExecute(Event event) {
+				DataHolder.getInstance().setLastEvent(event);
+			}
+		}.execute();
+		startActivity(new Intent(getApplicationContext(), MainActivity.class));
+		finish();
+	}
+
 	@OnClick(R.id.map_back)
-	public void onClick() {
+	public void onMapBackClick() {
 		startActivity(new Intent(getApplicationContext(), MainActivity.class));
 		finish();
 	}
 
 	@Override
 	public void onMapClick(LatLng latLng) {
-		Log.i(TAG, latLng.toString());
-		MarkerOptions marker = new MarkerOptions().title("Point "+(markers.size()+1)).position(latLng);
-		markers.add(marker);
-		map.addMarker(marker);
+		Log.i(TAG, "Click on map: " + latLng);
+		Marker newMarker = map.addMarker(new MarkerOptions().title("Point " + (selectedPoints.size() + 1)).position(latLng).snippet("Click again to remove, click else to add chained point"));
+		selectedPoints.put(newMarker.getId(), new Point().setGeoPoint(new GeoPt().setLatitude((float) latLng.latitude).setLongitude((float) latLng.longitude)).setNextPoint(getChainedPoint()));
 	}
-/*
 
+	@Override
+	public boolean onMarkerClick(Marker marker) {
+		Log.i(TAG, "Click on marker: " + marker);
+		if (selectedMarker == marker) {
+			Log.i(TAG, "Removing marker: " + marker);
+			selectedPoints.remove(marker.getId());
+			marker.remove();
+			selectedMarker = null;
+		} else {
+			selectedMarker = marker;
+		}
+		return false;
+	}
+
+	private Point getChainedPoint() {
+		return selectedMarker == null ? null : selectedPoints.get(selectedMarker.getId());
+	}
+
+/*
 	@Override
 	public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
 		switch (requestCode) {

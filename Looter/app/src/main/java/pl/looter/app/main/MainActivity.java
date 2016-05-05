@@ -19,6 +19,7 @@ import butterknife.OnClick;
 import pl.looter.R;
 import pl.looter.app.account.AccountActivity;
 import pl.looter.app.dataholder.DataHolder;
+import pl.looter.app.event.EventCreationActivity;
 import pl.looter.app.invitations.InvitationActivity;
 import pl.looter.app.map.MapActivity;
 import pl.looter.appengine.userApi.UserApi;
@@ -85,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.notifications:
                 break;
             case R.id.start_event:
+	            newActivity(EventCreationActivity.class);
                 break;
             case R.id.search_for_events:
                 break;

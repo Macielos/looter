@@ -145,7 +145,7 @@ public class EventParticipationEndpoint {
 			query = query.startAt(Cursor.fromWebSafeString(cursor));
 		}
 		QueryResultIterator<EventParticipation> queryIterator = query.iterator();
-		List<EventParticipation> eventParticipationList = new ArrayList<EventParticipation>(limit);
+		List<EventParticipation> eventParticipationList = new ArrayList<>(limit);
 		while (queryIterator.hasNext()) {
 			eventParticipationList.add(queryIterator.next());
 		}

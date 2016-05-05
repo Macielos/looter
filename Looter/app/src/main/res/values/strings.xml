@@ -26,7 +26,9 @@
 	<string name="user_defined">User-defined</string>
 	<string name="user_defined_desc">Manually select points and other event details</string>
 
+	<string name="event_title">Title</string>
 	<string name="event_description">Description</string>
+	<string name="open_event">Open event?</string>
 	<string name="event_start_time">Starts at</string>
 	<string name="event_end_time">Finishes at</string>
 
@@ -43,5 +45,6 @@
 	<string name="invitation_accepted">Invitation accepted</string>
 	<string name="invitation_rejected">Invitation rejected</string>
 	<string name="level">Level</string>
+	<string name="event_confirm">Create event</string>
 
 </resources>
