@@ -10,14 +10,20 @@ import com.google.appengine.api.datastore.QueryResultIterator;
 import com.googlecode.objectify.ObjectifyService;
 import com.googlecode.objectify.cmd.Query;
 
+import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 import java.util.logging.Logger;
 
 import javax.annotation.Nullable;
 import javax.inject.Named;
 
+import lombok.Data;
+import pl.looter.appengine.domain.EventParticipation;
 import pl.looter.appengine.domain.User;
+import pl.looter.appengine.utils.TimeUtils;
 
 import static com.googlecode.objectify.ObjectifyService.ofy;
 
@@ -49,6 +55,8 @@ public class UserEndpoint {
         ObjectifyService.register(User.class);
     }
 
+    private final EventParticipationEndpoint eventParticipationEndpoint = new EventParticipationEndpoint();
+
     /**
      * Returns the {@link User} with the corresponding ID.
      *
@@ -70,14 +78,54 @@ public class UserEndpoint {
     }
 
     @ApiMethod(
-            name = "login",
-            path = "login/{name}",
+            name = "loginAndGetNotifications",
+            path = "loginAndGetNotifications/{name}",
             httpMethod = ApiMethod.HttpMethod.GET)
-    public User login(@Named("name") String name) throws NotFoundException {
+    public UserStatus loginAndGetNotifications(@Named("name") String name) throws NotFoundException {
         logger.info("Login User: " + name);
-        //TODO logging
+        //TODO authentication via OAuth or sth else
         List<User> users = ofy().load().type(User.class).filter("name", name).list();
-        return users == null || users.isEmpty() ? null : users.get(0);
+	    if(users == null || users.isEmpty()) {
+		    return null;
+	    }
+	    User user = users.get(0);
+
+	    UserStatus userStatus = new UserStatus();
+	    userStatus.user = user;
+
+        userStatus.pendingEvents = new ArrayList<>(eventParticipationEndpoint.listPendingEvents(user.getId(), null, null).getItems());
+
+        Query<EventParticipation> requestsReceivedQuery = ofy().load().type(EventParticipation.class).filter("status", EventParticipation.Status.REQUESTED.name()).filter("master", user);
+        Query<EventParticipation> requestsAcceptedQuery = ofy().load().type(EventParticipation.class).filter("status", EventParticipation.Status.ACCEPTED.name()).filter("master", user);
+        Query<EventParticipation> invitationsReceivedQuery = ofy().load().type(EventParticipation.class).filter("status", EventParticipation.Status.INVITED.name()).filter("participant", user);
+        Query<EventParticipation> invitationsAcceptedQuery = ofy().load().type(EventParticipation.class).filter("status", EventParticipation.Status.ACCEPTED.name()).filter("participant", user);
+
+        if(user.getLastLogin() != null) {
+            requestsReceivedQuery.filter("sendTime >", user.getLastLogin().getTime());
+            requestsAcceptedQuery.filter("acceptTime >", user.getLastLogin().getTime());
+            invitationsReceivedQuery.filter("sendTime >", user.getLastLogin().getTime());
+            invitationsAcceptedQuery.filter("acceptTime >", user.getLastLogin().getTime());
+        }
+        userStatus.eventRequestsReceived = requestsReceivedQuery.list();
+        userStatus.eventRequestsAccepted = requestsAcceptedQuery.list();
+        userStatus.invitationsAccepted = invitationsAcceptedQuery.list();
+        userStatus.invitationsReceived = invitationsReceivedQuery.list();
+
+        user.setLastLogin(new Date());
+	    ofy().save().entity(user).now();
+
+        logger.info("Returning UserStatus: " + userStatus);
+        return userStatus;
+    }
+
+    @ApiMethod(
+            name = "findByNames",
+            path = "findByNames/{names}",
+            httpMethod = ApiMethod.HttpMethod.GET)
+    public CollectionResponse<User> findByNames(@Named("names") String names) throws NotFoundException {
+        logger.info("FindByNames: " + names);
+        List<User> users = ofy().load().type(User.class).filter("name IN", names.split(" ")).list();
+        return CollectionResponse.<User>builder().setItems(users).build();
     }
 
     /**
@@ -155,7 +203,7 @@ public class UserEndpoint {
             query = query.startAt(Cursor.fromWebSafeString(cursor));
         }
         QueryResultIterator<User> queryIterator = query.iterator();
-        List<User> userList = new ArrayList<User>(limit);
+        List<User> userList = new ArrayList<>(limit);
         while (queryIterator.hasNext()) {
             userList.add(queryIterator.next());
         }
@@ -168,5 +216,18 @@ public class UserEndpoint {
         } catch (com.googlecode.objectify.NotFoundException e) {
             throw new NotFoundException("Could not find User with ID: " + id);
         }
+    }
+
+    @Data
+    static class UserStatus implements Serializable {
+        private User user;
+        private List<EventParticipation> pendingEvents;
+
+        private List<EventParticipation> eventRequestsReceived;
+	    private List<EventParticipation> invitationsAccepted;
+
+        private List<EventParticipation> eventRequestsAccepted;
+        private List<EventParticipation> invitationsReceived;
+
     }
 }

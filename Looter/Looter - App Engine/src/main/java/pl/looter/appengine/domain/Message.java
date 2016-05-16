@@ -15,6 +15,8 @@ public class Message {
 	@Id
 	Long id;
 
+	String title;
+
 	String message;
 
 	public Message(String message) {

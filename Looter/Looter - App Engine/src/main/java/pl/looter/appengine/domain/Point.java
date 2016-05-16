@@ -6,33 +6,36 @@ import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
 import com.googlecode.objectify.annotation.Index;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import lombok.Data;
 
 @Entity
 @Data
 public class Point {
 
-	/*
-	- msg
-	- typ
-		- ukazanie kolejnego pktu
-		- zagadka
-		- loot
-	 */
-
 	@Id
 	private Long id;
 
 	private Long eventId;
 
+	private boolean isRoot;
+
 	private GeoPt geoPoint;
 
 	private Ref<Message> message;
 
-	private Ref<Point> nextPoint;
+	private Ref<Loot> loot;
+
+	private List<Long> nextPointIds = new ArrayList<>();
 
 	public Point() {
 
+	}
+
+	public Point(float latitude, float longitude) {
+		this(new GeoPt(latitude, longitude));
 	}
 
 	public Point(GeoPt geoPoint) {
@@ -47,11 +50,15 @@ public class Point {
 		this.message = message == null ? null : Ref.create(message);
 	}
 
-	public Point getNextPoint() {
-		return nextPoint == null ? null : nextPoint.get();
+	public Loot getLoot() {
+		return loot == null ? null : loot.get();
 	}
 
-	public void setNextPoint(Point nextPoint) {
-		this.nextPoint = nextPoint == null ? null : Ref.create(nextPoint);
+	public void setLoot(Loot loot) {
+		this.loot = Ref.create(loot);
+	}
+
+	public void addNextPoint(Long id) {
+		nextPointIds.add(id);
 	}
 }

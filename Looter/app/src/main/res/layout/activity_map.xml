@@ -6,7 +6,7 @@
                 android:paddingLeft="@dimen/activity_horizontal_margin"
                 android:paddingRight="@dimen/activity_horizontal_margin"
                 android:paddingTop="@dimen/activity_vertical_margin"
-                tools:context=".app.map.MapActivity">
+                tools:context=".app.activities.MapActivity">
 
 	<fragment xmlns:android="http://schemas.android.com/apk/res/android"
 	          xmlns:map="http://schemas.android.com/apk/res-auto"
@@ -15,7 +15,7 @@
 	          android:name="com.google.android.gms.maps.SupportMapFragment"
 	          android:layout_width="match_parent"
 	          android:layout_height="match_parent"
-	          tools:context=".app.map.MapActivity">
+	          tools:context=".app.activities.MapActivity">
 
 	</fragment>
 
@@ -32,5 +32,51 @@
 		android:layout_height="80dp"
 		android:text="@string/back"
 		android:layout_gravity="start|top"/>
+
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="260dp"
+		android:layout_height="wrap_content"
+		android:layout_gravity="end|top">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textAppearance="?android:attr/textAppearanceLarge"
+			android:text="@string/map_active_event"
+			android:id="@+id/map_active_event"
+			android:layout_gravity="end"/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:text="@string/map_current_location"
+			android:id="@+id/map_current_location"
+			android:layout_gravity="end"/>
+	</LinearLayout>
+
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="260dp"
+		android:layout_height="80dp"
+		android:layout_gravity="end|bottom">
+
+		<CheckBox
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/track_my_location"
+			android:id="@+id/map_track_my_location"
+			android:checked="false"
+			android:layout_gravity="end"/>
+
+		<CheckBox
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/connect_new_points"
+			android:id="@+id/map_connect_new_points"
+			android:checked="false"
+			android:layout_gravity="end"/>
+	</LinearLayout>
 
 </FrameLayout>

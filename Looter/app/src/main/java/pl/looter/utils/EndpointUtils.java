@@ -12,6 +12,8 @@ import java.io.IOException;
 
 import pl.looter.appengine.domain.eventApi.EventApi;
 import pl.looter.appengine.domain.eventParticipationApi.EventParticipationApi;
+import pl.looter.appengine.domain.eventParticipationApi.model.Event;
+import pl.looter.appengine.domain.eventParticipationApi.model.User;
 import pl.looter.appengine.domain.pointApi.PointApi;
 import pl.looter.appengine.userApi.UserApi;
 
@@ -84,5 +86,48 @@ public abstract class EndpointUtils {
         return builder;
     }
 
+    public static User toEPAUser(pl.looter.appengine.domain.eventApi.model.User user) {
+        return new User()
+        .setId(user.getId())
+        .setLastLogin(user.getLastLogin())
+        .setLevel(user.getLevel())
+        .setName(user.getName())
+        .setRegistrationId(user.getRegistrationId())
+        .setXp(user.getXp())
+        .setRegistrationTime(user.getRegistrationTime());
+    }
 
+    public static User toEPAUser(pl.looter.appengine.userApi.model.User user) {
+        return new User()
+                .setId(user.getId())
+                .setLastLogin(user.getLastLogin())
+                .setLevel(user.getLevel())
+                .setName(user.getName())
+                .setRegistrationId(user.getRegistrationId())
+                .setXp(user.getXp())
+                .setRegistrationTime(user.getRegistrationTime());
+    }
+
+	public static pl.looter.appengine.domain.eventApi.model.User toEAUser(pl.looter.appengine.userApi.model.User user) {
+		return new pl.looter.appengine.domain.eventApi.model.User()
+				.setId(user.getId())
+				.setLastLogin(user.getLastLogin())
+				.setLevel(user.getLevel())
+				.setName(user.getName())
+				.setRegistrationId(user.getRegistrationId())
+				.setXp(user.getXp())
+				.setRegistrationTime(user.getRegistrationTime());
+	}
+
+	public static Event toEPAEvent(pl.looter.appengine.domain.eventApi.model.Event event) {
+		return new Event()
+				.setId(event.getId())
+				.setTitle(event.getTitle())
+				.setDescription(event.getDescription())
+				.setDate(event.getDate())
+				.setStartTime(event.getStartTime())
+				.setEndTime(event.getEndTime())
+				.setOpen(event.getOpen())
+				.setMaster(toEPAUser(event.getMaster()));
+	}
 }

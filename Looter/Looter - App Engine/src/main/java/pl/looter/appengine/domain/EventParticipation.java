@@ -3,8 +3,13 @@ package pl.looter.appengine.domain;
 import com.googlecode.objectify.Ref;
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
+import com.googlecode.objectify.annotation.Index;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 import lombok.Data;
 
@@ -17,17 +22,28 @@ public class EventParticipation {
 	@Id
 	Long id;
 
+	@Index
 	private Ref<User> participant;
-
+	@Index
 	private Ref<User> master;
 
 	private Ref<Event> event;
 
-	private Date sendTime;
-	
+	@Index
+	private long eventTime;
+
+	private long sendTime;
+
+	private long acceptTime;
+
+	@Index
 	private Status status;
 
 	private int score;
+
+	private Set<Long> visitedPoints = new HashSet<>();
+
+	private List<Long> foundLoot = new ArrayList<>();
 
 	public EventParticipation() {
 
@@ -37,7 +53,8 @@ public class EventParticipation {
 		this.participant = Ref.create(participant);
 		this.master = Ref.create(master);
 		this.event = Ref.create(event);
-		this.sendTime = new Date();
+		this.eventTime = event.getDate();
+		this.sendTime = new Date().getTime();
 		this.status = Status.INVITED;
 		this.score = 0;
 	}
@@ -65,4 +82,5 @@ public class EventParticipation {
 	public void setEvent(Event event) {
 		this.event = Ref.create(event);
 	}
+
 }

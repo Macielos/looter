@@ -18,7 +18,8 @@
                 pl.looter.appengine.endpoints.UserEndpoint,
                 pl.looter.appengine.endpoints.EventEndpoint,
                 pl.looter.appengine.endpoints.PointEndpoint,
-                pl.looter.appengine.endpoints.EventParticipationEndpoint</param-value>
+                pl.looter.appengine.endpoints.EventParticipationEndpoint,
+                pl.looter.appengine.endpoints.LootEndpoint</param-value>
         </init-param>
     </servlet>
     <servlet-mapping>

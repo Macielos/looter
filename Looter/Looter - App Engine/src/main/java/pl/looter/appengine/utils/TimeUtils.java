@@ -9,7 +9,8 @@ import java.util.Date;
 
 public abstract class TimeUtils {
 
-    private static final long HOUR = 1000 * 3600;
+    private static final long MINUTE = 1000 * 60;
+    private static final long HOUR = 60 * MINUTE;
     private static final long DAY = HOUR * 24;
 
     private TimeUtils() {
@@ -25,16 +26,19 @@ public abstract class TimeUtils {
     }
 
     public static long daysAgo(int days) {
-        return now() - days*DAY;
+        return startOfDay(now()) - days*DAY;
     }
 
-    public static Date startOfDay() {
-        Calendar calendar = Calendar.getInstance();
-        int year = calendar.get(Calendar.YEAR);
-        int month = calendar.get(Calendar.MONTH);
-        int day = calendar.get(Calendar.DATE);
-        calendar.set(year, month, day, 0, 0, 0);
-        return calendar.getTime();
+    public static long hour(int hours, int minutes) {
+        return HOUR * hours + MINUTE * minutes;
+    }
+
+	public static long startOfDay(long time) {
+		return time / DAY * DAY;
+	}
+
+    public static long startOfDay() {
+        return now() / DAY * DAY;
     }
 
 }

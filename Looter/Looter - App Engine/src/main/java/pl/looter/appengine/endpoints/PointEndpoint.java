@@ -10,8 +10,11 @@ import com.google.appengine.api.datastore.QueryResultIterator;
 import com.googlecode.objectify.ObjectifyService;
 import com.googlecode.objectify.cmd.Query;
 
+import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.logging.Logger;
 
 import javax.annotation.Nullable;
@@ -73,20 +76,65 @@ public class PointEndpoint {
      * Inserts a new {@code Point}.
      */
     @ApiMethod(
-            name = "insert",
-            path = "point",
+            name = "insertTreeCollection",
+            path = "insertTreeCollection",
             httpMethod = ApiMethod.HttpMethod.POST)
+    public PointTreeCollection insertTreeCollection(PointTreeCollection pointTrees) {
+	    logger.info("inserting trees " + pointTrees);
+	    for(Map.Entry<String, Map<String, List<String>>> treeEntry: pointTrees.trees.entrySet()) {
+		    insertTree(treeEntry.getKey(), treeEntry.getValue(), pointTrees.treePoints);
+	    }
+	    return pointTrees;
+    }
+
+	private void insertTree(String node, Map<String, List<String>> tree, Map<String, Point> treePoints) {
+		Point nodePoint = treePoints.get(node);
+		if(tree != null) {
+			List<String> connections = tree.get(node);
+			if (connections != null) {
+				for (String nextNode : connections) {
+					insertTree(nextNode, tree, treePoints);
+					logger.info("connecting " + node + " to " + nextNode);
+
+					nodePoint.addNextPoint(treePoints.get(nextNode).getId());
+				}
+			}
+		}
+		logger.info("inserting "+node);
+		nodePoint = insert(nodePoint);
+		treePoints.put(node, nodePoint);
+	}
+
+
+/*
+	for (int i = connections.size() - 1; i >= 0; --i) {
+		Point point = pointList.get(i);
+		if (i < pointList.size() - 1) {
+			point.setNextPoint(pointList.get(i + 1));
+		}
+		point = insert(point);
+		pointList.set(i, point);
+	}
+}
+}
+		}*/
+
+    @ApiMethod(
+		    name = "insert",
+		    path = "point",
+		    httpMethod = ApiMethod.HttpMethod.POST)
     public Point insert(Point point) {
         // Typically in a RESTful API a POST does not have a known ID (assuming the ID is used in the resource path).
         // You should validate that point.id has not been set. If the ID type is not supported by the
         // Objectify ID generator, e.g. long or String, then you should generate the unique ID yourself prior to saving.
         //
-        // If your client provides the ID then you should probably use PUT instead.
+        // If your client provides the ID then you should probably use PUT instead.;
         ofy().save().entity(point).now();
-        logger.info("Created Point with ID: " + point.getId());
+        logger.info("Created Point: " + point);
 
         return ofy().load().entity(point).now();
     }
+
 
     /**
      * Updates an existing {@code Point}.
@@ -144,18 +192,47 @@ public class PointEndpoint {
             query = query.startAt(Cursor.fromWebSafeString(cursor));
         }
         QueryResultIterator<Point> queryIterator = query.iterator();
-        List<Point> pointList = new ArrayList<Point>(limit);
+        List<Point> pointList = new ArrayList<>(limit);
         while (queryIterator.hasNext()) {
             pointList.add(queryIterator.next());
         }
         return CollectionResponse.<Point>builder().setItems(pointList).setNextPageToken(queryIterator.getCursor().toWebSafeString()).build();
     }
 
-    private void checkExists(Long id) throws NotFoundException {
+	private void checkExists(Long id) throws NotFoundException {
         try {
             ofy().load().type(Point.class).id(id).safe();
         } catch (com.googlecode.objectify.NotFoundException e) {
             throw new NotFoundException("Could not find Point with ID: " + id);
         }
     }
+
+	public static class PointTreeCollection implements Serializable {
+		private Map<String, Point> treePoints = new HashMap<>();
+		private Map<String, Map<String, List<String>>> trees = new HashMap<>();
+
+		public Map<String, Point> getTreePoints() {
+			return treePoints;
+		}
+
+		public void setTreePoints(Map<String, Point> treePoints) {
+			this.treePoints = treePoints;
+		}
+
+		public Map<String, Map<String, List<String>>> getTrees() {
+			return trees;
+		}
+
+		public void setTrees(Map<String, Map<String, List<String>>> trees) {
+			this.trees = trees;
+		}
+
+		@Override
+		public String toString() {
+			return "PointTreeCollection{" +
+					"treePoints=" + treePoints +
+					", trees=" + trees +
+					'}';
+		}
+	}
 }

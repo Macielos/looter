@@ -11,6 +11,7 @@ import com.googlecode.objectify.ObjectifyService;
 import com.googlecode.objectify.cmd.Query;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.logging.Logger;
 
@@ -18,6 +19,7 @@ import javax.annotation.Nullable;
 import javax.inject.Named;
 
 import pl.looter.appengine.domain.Event;
+import pl.looter.appengine.domain.User;
 
 import static com.googlecode.objectify.ObjectifyService.ofy;
 
@@ -144,10 +146,65 @@ public class EventEndpoint {
             query = query.startAt(Cursor.fromWebSafeString(cursor));
         }
         QueryResultIterator<Event> queryIterator = query.iterator();
-        List<Event> eventList = new ArrayList<Event>(limit);
+        List<Event> eventList = new ArrayList<>(limit);
         while (queryIterator.hasNext()) {
             eventList.add(queryIterator.next());
         }
+        return CollectionResponse.<Event>builder().setItems(eventList).setNextPageToken(queryIterator.getCursor().toWebSafeString()).build();
+    }
+
+    @ApiMethod(
+            name = "findUserEvents",
+            path = "findUserEvents",
+            httpMethod = ApiMethod.HttpMethod.GET)
+    public CollectionResponse<Event> findUserEvents(@Named("userId") Long userId, @Nullable @Named("cursor") String cursor, @Nullable @Named("limit") Integer limit) {
+        logger.info("Getting events of user "+userId);
+        User user = ofy().load().type(User.class).id(userId).now();
+        if(user == null) {
+            return null;
+        }
+
+        limit = limit == null ? DEFAULT_LIST_LIMIT : limit;
+        Query<Event> query = ofy().load().type(Event.class).filter("master", user).order("-date").limit(limit);
+        if (cursor != null) {
+            query = query.startAt(Cursor.fromWebSafeString(cursor));
+        }
+        QueryResultIterator<Event> queryIterator = query.iterator();
+        List<Event> eventList = new ArrayList<>(limit);
+        while (queryIterator.hasNext()) {
+            eventList.add(queryIterator.next());
+        }
+        logger.info("Results: "+eventList);
+        return CollectionResponse.<Event>builder().setItems(eventList).setNextPageToken(queryIterator.getCursor().toWebSafeString()).build();
+    }
+
+    @ApiMethod(
+            name = "findUpcomingOpenEvents",
+            path = "findUpcomingOpenEvents",
+            httpMethod = ApiMethod.HttpMethod.GET)
+    public CollectionResponse<Event> findUpcomingOpenEvents(@Named("excludedUserId") Long excludedUserId, @Named("from") Date from, @Named("to") Date to, @Named("title") String title, @Nullable @Named("cursor") String cursor, @Nullable @Named("limit") Integer limit) {
+        logger.info("Getting upcoming events from "+from+" to "+to+" with title "+title);
+	    limit = limit == null ? DEFAULT_LIST_LIMIT : limit;
+	    Query<Event> query = ofy().load().type(Event.class)
+			    .filter("open", true)
+			    .filter("date >", from.getTime())
+			    .filter("date <", to.getTime());
+        if(title != null && title.length() > 0) {
+            query.filter("title", title);
+        }
+        query.limit(limit);
+        if (cursor != null) {
+            query = query.startAt(Cursor.fromWebSafeString(cursor));
+        }
+        QueryResultIterator<Event> queryIterator = query.iterator();
+        List<Event> eventList = new ArrayList<>(limit);
+        while (queryIterator.hasNext()) {
+            Event event = queryIterator.next();
+            if(!excludedUserId.equals(event.getMaster().getId())) {
+                eventList.add(event);
+            }
+        }
+	    logger.info("Results: "+eventList);
         return CollectionResponse.<Event>builder().setItems(eventList).setNextPageToken(queryIterator.getCursor().toWebSafeString()).build();
     }
 

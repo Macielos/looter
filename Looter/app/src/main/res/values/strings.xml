@@ -7,11 +7,14 @@
 	<!-- FUCK-UPS -->
 	<string name="internal_error">Internal error occurred. Try again later</string>
 	<string name="connection_error">Cannot reach server. Check your internet connection</string>
+	<string name="no_results">No results at this time.</string>
+	<string name="wrong_dates">Please select valid dates</string>
 
 	<!-- MAIN MENU -->
 	<string name="initialization">Initializing&#8230;</string>
 
 	<string name="open_map">Open Map</string>
+	<string name="select_active_event">Select active event</string>
 	<string name="invitations">Invitations</string>
 	<string name="notifications">Notifications</string>
 	<string name="start_event">Start new event</string>
@@ -19,8 +22,12 @@
 	<string name="my_events">My events</string>
 	<string name="my_contacts">My contacts</string>
 	<string name="my_account">My account</string>
+	<string name="quit">Quit</string>
 
-	<!-- EVENTS -->
+	<!-- USER -->
+	<string name="level">Level</string>
+
+	<!-- CREATING EVENTS -->
 	<string name="generic">Generic</string>
 	<string name="generic_desc">Select area on the and let Looter generate events in random locations</string>
 	<string name="user_defined">User-defined</string>
@@ -29,11 +36,40 @@
 	<string name="event_title">Title</string>
 	<string name="event_description">Description</string>
 	<string name="open_event">Open event?</string>
+	<string name="event_date">Date</string>
 	<string name="event_start_time">Starts at</string>
 	<string name="event_end_time">Finishes at</string>
+	<string name="invite_users">Invite users to your event</string>
+	<string name="search_users">Search</string>
+	<string name="invited_users">Invited users</string>
+	<string name="event_start_time_default">10:00</string>
+	<string name="event_end_time_default">18:00</string>
+
+	<!-- SEARCHING FOR EVENTS -->
+	<string name="event_search_title">Find upcoming events</string>
+	<string name="event_search_from">Search from date</string>
+	<string name="event_search_to">Search to date</string>
+	<string name="event_search_by_title">Search by event title</string>
+	<string name="event_searching">Searching for events&#8230;</string>
+	<string name="event_master">By user</string>
+	<string name="event_join">Join event</string>
+	<string name="event_sending_request">Sending join request&#8230;</string>
+	<string name="event_request_sent">Request sent</string>
+	<string name="event_search_result_title">Found events:</string>
+	<string name="event_search_result_new_query">New query</string>
 
 	<!-- MAP -->
 	<string name="title_activity_map">Map</string>
+	<string name="event_confirm">Create event</string>
+	<string name="map_active_event">Active event:</string>
+	<string name="map_current_location">Current location:</string>
+	<string name="track_my_location">Track my location</string>
+	<string name="connect_new_points">Connect new points</string>
+	<string name="event_saving">Saving new event&#8230;</string>
+	<string name="event_saved">Event successfully saved</string>
+	<string name="map_continue">Continue</string>
+	<string name="map_xp_gained">Gained xp: %d</string>
+	<string name="map_loot_found">Found loot: %s</string>
 
 	<!-- INVITATIONS -->
 	<string name="invitation_fetching">Fetching invitations&#8230;</string>
@@ -44,7 +80,13 @@
 	<string name="invitation_reject">Reject</string>
 	<string name="invitation_accepted">Invitation accepted</string>
 	<string name="invitation_rejected">Invitation rejected</string>
-	<string name="level">Level</string>
-	<string name="event_confirm">Create event</string>
+
+	<!-- MY EVENTS -->
+	<string name="my_events_title">My events</string>
+	<string name="my_events_fetching">Fetching events&#8230;</string>
+
+	<!-- ACTIVE EVENT -->
+	<string name="active_event_fetching">Selecting event and fetching details&#8230;</string>
+	<string name="active_event">(ACTIVE)</string>
 
 </resources>

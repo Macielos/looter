@@ -11,14 +11,19 @@ import com.googlecode.objectify.ObjectifyService;
 import com.googlecode.objectify.cmd.Query;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.logging.Logger;
 
 import javax.annotation.Nullable;
 import javax.inject.Named;
 
-import pl.looter.appengine.domain.Event;
+import lombok.Data;
 import pl.looter.appengine.domain.EventParticipation;
+import pl.looter.appengine.domain.Point;
+import pl.looter.appengine.domain.User;
+import pl.looter.appengine.utils.PointUtils;
+import pl.looter.appengine.utils.TimeUtils;
 
 import static com.googlecode.objectify.ObjectifyService.ofy;
 
@@ -68,6 +73,24 @@ public class EventParticipationEndpoint {
 			throw new NotFoundException("Could not find EventParticipation with ID: " + id);
 		}
 		return eventParticipation;
+	}
+
+	@ApiMethod(
+			name = "getEventStatus",
+			path = "getEventStatus/{id}",
+			httpMethod = ApiMethod.HttpMethod.GET)
+	public EventStatus getEventStatus(@Named("id") Long id) throws NotFoundException {
+		logger.info("Getting EventParticipation with ID: " + id);
+		EventParticipation eventParticipation = ofy().load().type(EventParticipation.class).id(id).now();
+		if (eventParticipation == null) {
+			return null;
+		}
+
+		EventStatus eventStatus = new EventStatus();
+		eventStatus.setEventParticipation(eventParticipation);
+		eventStatus.setPointTreeCollection(PointUtils.pointTreeCollection(ofy().load().type(Point.class).filter("eventId", eventParticipation.getEvent().getId()).list()));
+
+		return eventStatus;
 	}
 
 	/**
@@ -152,15 +175,45 @@ public class EventParticipationEndpoint {
 		return CollectionResponse.<EventParticipation>builder().setItems(eventParticipationList).setNextPageToken(queryIterator.getCursor().toWebSafeString()).build();
 	}
 
-
-
 	@ApiMethod(
 			name = "listUserInvitations",
 			path = "listUserInvitations",
 			httpMethod = ApiMethod.HttpMethod.GET)
-	public CollectionResponse<EventParticipation> listUserInvitations(@Named("userId") Long userId, @Named("cursor") String cursor, @Nullable @Named("limit") Integer limit) {
+	public CollectionResponse<EventParticipation> listUserInvitations(@Named("userId") Long userId, @Nullable @Named("cursor") String cursor, @Nullable @Named("limit") Integer limit) {
+		logger.info("Loading invitation of user "+userId);
+		User user = ofy().load().type(User.class).id(userId).now();
+		if(user == null) {
+			return null;
+		}
+
 		limit = limit == null ? DEFAULT_LIST_LIMIT : limit;
-		Query<EventParticipation> query = ofy().load().type(EventParticipation.class).filter("inviteeId", userId).limit(limit);
+		Query<EventParticipation> query = ofy().load().type(EventParticipation.class)
+				.filter("participant", user).filter("status", EventParticipation.Status.INVITED.name())
+				.limit(limit);
+		if (cursor != null) {
+			query = query.startAt(Cursor.fromWebSafeString(cursor));
+		}
+		QueryResultIterator<EventParticipation> queryIterator = query.iterator();
+		List<EventParticipation> invitationList = new ArrayList<>(limit);
+		while (queryIterator.hasNext()) {
+			invitationList.add(queryIterator.next());
+		}
+		return CollectionResponse.<EventParticipation>builder().setItems(invitationList).setNextPageToken(queryIterator.getCursor().toWebSafeString()).build();
+	}
+
+	@ApiMethod(
+			name = "listPendingEvents",
+			path = "listPendingEvents",
+			httpMethod = ApiMethod.HttpMethod.GET)
+	public CollectionResponse<EventParticipation> listPendingEvents(@Named("userId") Long userId, @Nullable @Named("cursor") String cursor, @Nullable @Named("limit") Integer limit) {
+		logger.info("Loading pending events of user "+userId);
+		User user = ofy().load().type(User.class).id(userId).now();
+		if(user == null) {
+			return null;
+		}
+
+		limit = limit == null ? DEFAULT_LIST_LIMIT : limit;
+		Query<EventParticipation> query = ofy().load().type(EventParticipation.class).filter("participant", user).filter("status", EventParticipation.Status.ACCEPTED.name()).filter("eventTime >=", TimeUtils.startOfDay()).filter("eventTime <=", TimeUtils.daysAgo(-3));
 		if (cursor != null) {
 			query = query.startAt(Cursor.fromWebSafeString(cursor));
 		}
@@ -183,10 +236,14 @@ public class EventParticipationEndpoint {
 			logger.info("No EventParticipation with id "+id);
 			return;
 		}
+		if(eventParticipation.getStatus() != EventParticipation.Status.REQUESTED && eventParticipation.getStatus()!= EventParticipation.Status.INVITED) {
+			logger.info("Wrong EventParticipation status with id "+id);
+			return;
+		}
 		eventParticipation.setStatus(EventParticipation.Status.ACCEPTED);
+		eventParticipation.setAcceptTime(new Date().getTime());
 		ofy().save().entity(eventParticipation).now();
 		logger.info("Accepted EventParticipation: " + eventParticipation);
-
 	}
 
 	@ApiMethod(
@@ -197,6 +254,10 @@ public class EventParticipationEndpoint {
 		EventParticipation eventParticipation = get(id);
 		if(eventParticipation == null) {
 			logger.info("No EventParticipation with id "+id);
+			return;
+		}
+		if(eventParticipation.getStatus() != EventParticipation.Status.REQUESTED && eventParticipation.getStatus()!= EventParticipation.Status.INVITED) {
+			logger.info("Wrong EventParticipation status with id "+id);
 			return;
 		}
 		eventParticipation.setStatus(EventParticipation.Status.REJECTED);
@@ -210,5 +271,13 @@ public class EventParticipationEndpoint {
 		} catch (com.googlecode.objectify.NotFoundException e) {
 			throw new NotFoundException("Could not find EventParticipation with ID: " + id);
 		}
+	}
+
+	@Data
+	static class EventStatus {
+
+		private EventParticipation eventParticipation;
+
+		private PointEndpoint.PointTreeCollection pointTreeCollection;
 	}
 }
